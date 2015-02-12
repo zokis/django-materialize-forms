@@ -1,2 +1,2 @@
-# django_materialize_forms
+# django-materialize-forms
 Django tamplatetags for materialize css

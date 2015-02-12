@@ -1,0 +1,30 @@
+{% if input_type == "checkbox" %}
+    {{ field }}
+    <label for="{{ field.auto_id }}">{{ field.label }}</label>
+    {% include "materialize/field_help.html" %}
+{% else %}
+    {% if input_type == "multicheckbox" %}
+        {% include "materialize/field_choices.html" with type="checkbox" %}
+        {% include "materialize/field_help.html" with display="block" %}
+    {% else %}
+        {% if input_type == "radioset" %}
+            {% include "materialize/field_choices.html" with type="radio" %}
+            {% include "materialize/field_help.html" with display="block" %}
+        {% else %}
+            {% if input_type == "text" or input_type == "textarea" %}
+            <div class="input-field col {{ col }}">
+                <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                {{ field }}
+                {% include "materialize/field_help.html" %}
+            </div>
+            {% else %}
+                <div class="col {{ col }}">
+                    <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% include "materialize/field_help.html" %}
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endif %}
+{% include "materialize/field_errors.html" %}

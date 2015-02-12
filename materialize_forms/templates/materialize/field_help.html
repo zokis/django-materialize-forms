@@ -1,0 +1,5 @@
+{% if field.help_text %}
+    {% autoescape off %}
+        <span class="help-inline">{{ field.help_text }}</span>
+    {% endautoescape %}
+{% endif %}

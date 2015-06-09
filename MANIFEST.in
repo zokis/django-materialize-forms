@@ -1,0 +1,3 @@
+recursive-include materialize_forms/templates *.html
+recursive-include materialize_forms/static *
+recursive-exclude * .DS_Store

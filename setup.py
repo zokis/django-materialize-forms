@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-materialize-forms',
-    version='0.1.5',
+    version='0.2.0',
     url='https://github.com/zokis/django-materialize-forms',
     author='Marcelo Fonseca Tambalo',
     author_email='marcelo.zokis@gmail.com',

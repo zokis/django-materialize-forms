@@ -1,3 +1,5 @@
-recursive-include materialize_forms/templates *.html
+include LICENSE
+include README.md
+recursive-include materialize_forms/templates *
 recursive-include materialize_forms/static *
 recursive-exclude * .DS_Store

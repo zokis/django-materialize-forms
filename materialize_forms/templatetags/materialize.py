@@ -60,5 +60,3 @@ def html_attrs(attrs):
     for name, value in attrs.items():
         pairs.append(u'%s="%s"' % (escape(name), escape(value)))
     return mark_safe(u' '.join(pairs))
-
-

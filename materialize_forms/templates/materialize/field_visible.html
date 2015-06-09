@@ -16,15 +16,16 @@
                 <label for="{{ field.auto_id }}">{{ field.label }}</label>
                 {{ field }}
                 {% include "materialize/field_help.html" %}
+                {% include "materialize/field_errors.html" %}
             </div>
             {% else %}
                 <div class="col {{ col }}">
                     <label for="{{ field.auto_id }}">{{ field.label }}</label>
                     {{ field }}
                     {% include "materialize/field_help.html" %}
+                    {% include "materialize/field_errors.html" %}
                 </div>
             {% endif %}
         {% endif %}
     {% endif %}
 {% endif %}
-{% include "materialize/field_errors.html" %}

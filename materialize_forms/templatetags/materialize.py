@@ -25,6 +25,12 @@ def as_material(field, col='s6'):
     except:
         raise ValueError("Expected a Field, got a %s" % type(field))
 
+    try:
+        clazz = {'class': widget.attrs['class'] + ' validate'}
+    except KeyError:
+        clazz = {'class': 'validate'}
+    widget.attrs.update(clazz)
+
     if isinstance(field.field, DateField):
         add_css_class_widget(widget, 'datepicker')
 
@@ -41,7 +47,6 @@ def as_material(field, col='s6'):
         input_type = u'radioset'
     elif isinstance(widget, widgets.Select):
         input_type = u'select'
-        add_css_class_widget(widget, 'browser-default')
     else:
         input_type = u'default'
 
@@ -60,3 +65,5 @@ def html_attrs(attrs):
     for name, value in attrs.items():
         pairs.append(u'%s="%s"' % (escape(name), escape(value)))
     return mark_safe(u' '.join(pairs))
+
+

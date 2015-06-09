@@ -15,4 +15,5 @@
 
     {{ field }}
     <label for="{{ field.auto_id }}">{{ field.label }}</label>
+    {% include "materialize/field_errors.html" %}
 {% endfor %}

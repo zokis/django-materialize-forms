@@ -2,6 +2,8 @@
 Django tamplatetags for materialize css
 
 
+[![PyPI version](https://badge.fury.io/py/django-materialize-forms.svg)](http://badge.fury.io/py/django-materialize-forms)
+
 
 Installation
 ------------
